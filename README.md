@@ -21,6 +21,7 @@ A simple GUI-based Banking Transaction System built using Python and Tkinter.
 - Tkinter
 - ttk Widgets
 
+_____ Features Explained _____
 
 ##### Login System #####
 Users must enter valid username and password to access the system.
