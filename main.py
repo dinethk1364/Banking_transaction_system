@@ -11,9 +11,10 @@ class BankAccounts:
 #####sample accounts#####
 accounts = {
     "20050001": BankAccounts("20050001","D. D. K. De Silva",120000),
-    "20050002": BankAccounts("20050002","Punsara",150000),
-    "20050003": BankAccounts("20050003","Viraj",135000),
-    "20050004": BankAccounts("20050004","kavindu",450000)
+    "20050002": BankAccounts("20050002","M. V. Ransith",150000),
+    "20050003": BankAccounts("20050003","S. Aranya",135000),
+    "20050004": BankAccounts("20050004","S. oshadi",450000),
+    "20050005": BankAccounts("20050005","K.G.N. Kalpa",100000)
 
 }
 
@@ -124,7 +125,7 @@ def logout():
 def withFunc(amount,balLabel):
     global entryAmount, userAccBal
     try:
-        amount = int(amount)
+        amount = float(amount)
 
         if amount <= 0:
             messagebox.showerror("Error", "Enter valid amount")
@@ -183,7 +184,7 @@ def withFunc(amount,balLabel):
 def depFunc(amount,balLabel):
     global entryAmount,userAccBal
     try:
-        amount = int(amount)
+        amount = float(amount)
 
         if amount <= 0:
             messagebox.showerror("Error", "Enter valid amount")
