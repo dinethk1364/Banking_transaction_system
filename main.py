@@ -141,7 +141,7 @@ def withFunc(amount,balLabel):
             userAccBal -= amount
 
             accounts[userAccNo].balance = userAccBal
-            balLabel.config(text=f"LKR {userAccBal}/=")
+            balLabel.config(text=f"LKR {userAccBal:.2f}/=")
 
             # main.destroy()
 
@@ -152,21 +152,21 @@ def withFunc(amount,balLabel):
                 # print(result)
                 if result==True:
 
-                    messagebox.showinfo("Success", f"Withdrawn {amount}")
+                    messagebox.showinfo("Success", f"Withdrawn {amount:.2f}")
 
                     # print(userAccBal)
-                    messagebox.showinfo("Balance",f"Available Balance is LKR {userAccBal}")
+                    messagebox.showinfo("Balance",f"Available Balance is LKR {userAccBal:.2f}")
                 else:
                     userAccBal+=amount
                     # print(userAccBal)
                     accounts[userAccNo].balance = userAccBal
-                    balLabel.config(text=f"LKR {userAccBal}/=")
+                    balLabel.config(text=f"LKR {userAccBal:.2f}/=")
 
             else:
-                messagebox.showinfo("Success", f"Withdrawn {amount}")
+                messagebox.showinfo("Success", f"Withdrawn {amount:.2f}")
 
                     # print(userAccBal)
-                messagebox.showinfo("Balance",f"Available Balance is LKR {userAccBal}")
+                messagebox.showinfo("Balance",f"Available Balance is LKR {userAccBal:.2f}")
 
             trxWin.focus_force()
             withAmnt.delete(0, tk.END)
@@ -194,13 +194,13 @@ def depFunc(amount,balLabel):
 
         userAccBal += amount
         accounts[userAccNo].balance = userAccBal
-        balLabel.config(text=f"LKR {userAccBal}/=")
+        balLabel.config(text=f"LKR {userAccBal:.2f}/=")
         # main.destroy()
 
-        messagebox.showinfo("Success", f"Deposited {amount}")
+        messagebox.showinfo("Success", f"Deposited {amount:.2f}")
 
         # print(userAccBal)
-        messagebox.showinfo("Balance",f"Available Balance is LKR {userAccBal}")
+        messagebox.showinfo("Balance",f"Available Balance is LKR {userAccBal:.2f}")
         trxWin.focus_force()
         depAmnt.delete(0,tk.END)
 
@@ -310,6 +310,7 @@ def startProgram():
     top = int(displayHeight/2-loginWindowHeight/2)
 
     loginWindow.title("Login")
+    loginWindow.resizable(False,False)
     loginWindow.iconbitmap('icon/icon.ico')
     loginWindow.configure(bg="#FFF9E8")
 

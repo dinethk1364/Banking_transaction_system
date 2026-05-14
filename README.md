@@ -4,8 +4,7 @@ A simple GUI-based Banking Transaction System built using Python and Tkinter.
 
 ##### Features #####
 
-- User Login System
-- Search Bank Accounts
+- Teller Login System
 - Cash Withdrawals
 - Cash Deposits
 - Balance Checking
